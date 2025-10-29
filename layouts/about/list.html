@@ -1,0 +1,85 @@
+{{ define "main" }}
+<div class="page-content">
+  <div class="container">
+    <header class="page-header">
+      <h1>{{ .Title }}</h1>
+    </header>
+    
+    <div class="content-wrapper">
+      <div class="content-body">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.page-content {
+  padding: var(--spacing-xl) 0;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-body {
+  background: var(--bg-primary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  line-height: 1.8;
+}
+
+.content-body h2,
+.content-body h3,
+.content-body h4 {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.content-body ul,
+.content-body ol {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.content-body li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.content-body a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
+.content-body a:hover {
+  color: var(--accent-secondary);
+}
+
+.content-body hr {
+  margin: var(--spacing-lg) 0;
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
+
+.content-body strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.content-body code {
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  background: var(--bg-secondary);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 768px) {
+  .content-body {
+    padding: var(--spacing-md);
+  }
+}
+</style>
+{{ end }}
