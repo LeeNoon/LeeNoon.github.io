@@ -1,0 +1,85 @@
+{{ define "main" }}
+<article class="single-post">
+  <header class="post-header">
+    <div class="container">
+      <h1 class="post-title">{{ .Title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日" }}</time>
+        {{ with .Params.categories }}
+        <span class="separator">•</span>
+        <a href="{{ "/categories/" | relURL }}{{ index . 0 | urlize }}" class="category">{{ index . 0 }}</a>
+        {{ end }}
+        {{ if .Site.Params.readingTime.enabled }}
+        <span class="separator">•</span>
+        <span class="reading-time">阅读时间 {{ .ReadingTime }} 分钟</span>
+        {{ end }}
+      </div>
+      {{ with .Params.tags }}
+      <div class="post-tags">
+        {{ range . }}
+        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">#{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </header>
+  
+  <div class="post-content-wrapper">
+    <div class="container">
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+      
+      <!-- 社交分享 -->
+      <div class="post-share">
+        <h3>分享这篇文章</h3>
+        <div class="share-buttons">
+          <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener" class="share-btn twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            Twitter
+          </a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener" class="share-btn facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Facebook
+          </a>
+          <a href="javascript:void(0)" onclick="copyUrl()" class="share-btn copy">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            复制链接
+          </a>
+        </div>
+      </div>
+      
+      <!-- 上一篇/下一篇 -->
+      <nav class="post-navigation">
+        {{ with .PrevInSection }}
+        <a href="{{ .Permalink }}" class="nav-prev">
+          <span class="nav-label">← 上一篇</span>
+          <span class="nav-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+        {{ with .NextInSection }}
+        <a href="{{ .Permalink }}" class="nav-next">
+          <span class="nav-label">下一篇 →</span>
+          <span class="nav-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+      </nav>
+      
+      <!-- 评论系统 -->
+      {{ if .Site.Params.comments.enabled }}
+      <div class="post-comments">
+        {{ partial "comments.html" . }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</article>
+
+<script>
+function copyUrl() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    alert('链接已复制到剪贴板！');
+  });
+}
+</script>
+{{ end }}

@@ -1,0 +1,46 @@
+{{ define "main" }}
+<div class="list-page">
+  <div class="container">
+    <header class="page-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}
+      <p class="page-description">{{ . }}</p>
+      {{ end }}
+    </header>
+    
+    <div class="posts-timeline">
+      {{ range .Pages.GroupByDate "2006" }}
+      <div class="timeline-group">
+        <h2 class="timeline-year">{{ .Key }}</h2>
+        {{ range .Pages }}
+        <article class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01-02" }}</time>
+            <h3 class="post-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h3>
+            <p class="post-summary">{{ .Summary }}</p>
+            <div class="post-meta">
+              {{ with .Params.categories }}
+              <span class="category">{{ index . 0 }}</span>
+              {{ end }}
+              {{ with .Params.tags }}
+              <div class="tags">
+                {{ range first 3 . }}
+                <span class="tag">#{{ . }}</span>
+                {{ end }}
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</div>
+{{ end }}
