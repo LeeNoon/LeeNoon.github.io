@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="taxonomy-list-page">
+  <div class="container">
+    <header class="page-header">
+      <h1>{{ .Title }}</h1>
+      <p class="page-description">{{ .Site.Taxonomies.categories.Len }} 个分类，共 {{ len .Site.RegularPages }} 篇文章</p>
+    </header>
+    
+    <div class="taxonomy-cloud">
+      {{ range .Data.Terms.ByCount }}
+      <a href="{{ .Page.Permalink }}" class="taxonomy-item" style="font-size: {{ add 1 (div (mul .Count 2) 10) }}rem;">
+        {{ .Page.Title }}
+        <span class="count">{{ .Count }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
