@@ -1,7 +1,9 @@
 baseURL = "https://LeeNoon.github.io/"
 languageCode = "zh-CN"
 title = "LeeNoon 的温柔博客"
-paginate = 8
+
+[pagination]
+  pagerSize = 8
 
 [params]
   description = "一个温柔、简洁的个人博客"
