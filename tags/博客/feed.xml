@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on LeeNoon 的温柔博客</title><link>https://LeeNoon.github.io/tags/%E5%8D%9A%E5%AE%A2/</link><description>Recent content in 博客 on LeeNoon 的温柔博客</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Wed, 29 Oct 2025 14:49:47 +0800</lastBuildDate><atom:link href="https://LeeNoon.github.io/tags/%E5%8D%9A%E5%AE%A2/feed.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 博客搭建指南</title><link>https://LeeNoon.github.io/posts/hugo-guide/</link><pubDate>Wed, 29 Oct 2025 11:00:00 +0800</pubDate><guid>https://LeeNoon.github.io/posts/hugo-guide/</guid><description>&lt;h2 id="前言"&gt;前言&lt;/h2&gt;
+&lt;p&gt;Hugo 是一个快速、现代的静态网站生成器，非常适合用来搭建个人博客。&lt;/p&gt;
+&lt;h3 id="为什么选择-hugo"&gt;为什么选择 Hugo？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;⚡ &lt;strong&gt;速度快&lt;/strong&gt;：构建速度极快&lt;/li&gt;
+&lt;li&gt;🎨 &lt;strong&gt;灵活&lt;/strong&gt;：完全自定义&lt;/li&gt;
+&lt;li&gt;📝 &lt;strong&gt;简单&lt;/strong&gt;：使用 Markdown 写作&lt;/li&gt;
+&lt;li&gt;🆓 &lt;strong&gt;免费&lt;/strong&gt;：开源且免费&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="快速开始"&gt;快速开始&lt;/h3&gt;
+&lt;h4 id="1-安装-hugo"&gt;1. 安装 Hugo&lt;/h4&gt;
+&lt;p&gt;在 macOS 上：&lt;/p&gt;</description></item><item><title>欢迎来到我的博客</title><link>https://LeeNoon.github.io/posts/welcome/</link><pubDate>Wed, 29 Oct 2025 10:00:00 +0800</pubDate><guid>https://LeeNoon.github.io/posts/welcome/</guid><description>&lt;h2 id="欢迎-"&gt;欢迎 🎉&lt;/h2&gt;
+&lt;p&gt;欢迎来到我的个人博客！这里是我分享思考、学习和生活的空间。&lt;/p&gt;
+&lt;h3 id="博客特点"&gt;博客特点&lt;/h3&gt;
+&lt;p&gt;这个博客具有以下特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;现代化设计&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简洁美观的界面&lt;/li&gt;
+&lt;li&gt;响应式布局&lt;/li&gt;
+&lt;li&gt;流畅的动画效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;完善的功能&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
