@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Site.Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </div>
+</body>
+</html>
