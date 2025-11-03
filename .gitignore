@@ -13,3 +13,4 @@ Thumbs.db
 *.swp
 *.swo
 *~
+hugo_extended_*.tar.gz
